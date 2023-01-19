@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang=pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fabryka Cukierków</title>
+        <link rel = "stylesheet" href = "styl10.css"/>
+        <script>
+            function zamowienie()
+            {
+                let ksztalt = document.getElementById("numerKsztaltu");
+                let rezultat = document.getElementById("rezultat");
+
+                if(ksztalt.value==1)
+                {
+                    let zwroc = "Twoje zamowienie to cukierek cytryna"
+                    rezultat.innerHTML = zwroc;
+                }
+                else if(ksztalt.value==2)
+                {
+                    let zwroc = "Twoje zamowienie to cukierek lisc"
+                    rezultat.innerHTML = zwroc;
+                }
+                else if(ksztalt.value==3)
+                {
+                    let zwroc = "Twoje zamowienie to cukierek banan"
+                    rezultat.innerHTML = zwroc;
+                }
+                else
+                {
+                    let zwroc = "Twoje zamowienie to cukierek inny"
+                    rezultat.innerHTML = zwroc;
+                }
+            }
+            function zmienKolor()
+            {
+                let r = document.getElementById("red").value;
+                let g = document.getElementById("green").value;
+                let b = document.getElementById("blue").value;
+                let value = document.getElementById("przycisk").style.backgroundColor = `rgb(${r},${g},${b})`;
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id = "topLeft">
+            <a href = "Zamowienie.html"><img src = "img/cukierki1.jpg"> </a>
+        </div>
+
+        <div id = "topRight">
+            <a href = "index.html"><img src = "img/cukierki2.png"> </a>
+        </div>
+
+        <div id = "baner">
+            <h1> Strefa zamówień </h1>
+        </div>
+    
+        <div style = "clear: both;"></div>
+        
+        
+        <div id = "left">
+            Numer kształtu <br>
+            <input type = "number" id = "numerKsztaltu"> <br>
+            Skomponuj swój kolor, podaj RGB: <br> 
+            R: <input type = "number" id = "red"> G: <input type = "number" id = "green"> B <input type = "number" id = "blue"> <br>
+            <input type = "button" value="Zamówienie" onclick = "zamowienie()"> <br>
+            <p id = "rezultat">  </p>
+            Twoje zamówienie <br><br>
+            <input type = "button" value="Kolor" style = "background-color: rgb(255,255,255)" onclick = "zmienKolor()" id = "przycisk">
+        </div>
+
+        <div id = "right">
+            <h2> Nasza oferta </h2>
+            <br>
+                <table>
+                    <tr>
+                        <td> <p> Kształty </p></td> <td rowspan="3"> <p id = "tabelaRight"> Możesz zamówić <br> dowolny kolor cukierka  </p></td> 
+                    </tr>
+                    <tr>
+                        <td rowspan="2" style = "height: 50px; width: 40%;"><p>1. Cytryna </p> <p>2. Liść </p> <p>3. Banan </p></td> 
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </table>
+        </div>
+
+        <div id = "footer">
+            Stronę opracował: Kacper Gołuchowski
+        </div>
+    </body>
+</html>
